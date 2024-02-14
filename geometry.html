@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Gem</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <!-- tailwind and daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .font-inter
+        {
+            font-family: Inter, sans-serif;
+        }
+    </style>
 
 </head>
-<body class="m-8">
+<body class="m-8 font-inter">
     <header>
-
+        <nav class="flex p-4 bg-sky-200 mb-10 rounded-md">
+            <div class="flex-1">
+                <h2 class="text-4xl font-bold">Interactive</h2>
+                <h3 class="font-3xl font-medium text-[accent]">Geometry Genius</h3>
+            </div>
+            <div class="text-justify">
+                <button class="bg-[#1090D8] text-white pr-12 text-xl text-center rounded-md w-30 h-12">Blog</button>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -146,8 +163,8 @@
                 </div>
             </div>
             <!-- Area-calculation-container -->
-            <div class="w-60 ml-5 border-2 border-gray-700 rounded-md">
-                <h3 class="txt-3xl text-center pt-2">Area Calculation</h3>
+            <div class="w-60 ml-5 border-2 border-gray-700 rounded-md bg-violet-300">
+                <h3 class="txt-3xl text-center pt-2 border-2 border-sky-500 rounded-md bg-yellow-200 text-black">Area Calculation</h3>
             </div>
         </div>
     </main>
