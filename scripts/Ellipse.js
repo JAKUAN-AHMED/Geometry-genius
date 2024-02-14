@@ -1,16 +1,10 @@
 function calculateEllipseArea()
 {
     //get a
-    const Ellipse=document.getElementById('aOfEl');
-    const EllipseText=Ellipse.value;
-    const EllipseValue=parseFloat(EllipseText);
-
+    const Ellipse=getInputValueById('aOfEl');
     //get b
-    const EllipseB=document.getElementById('bOfEl');
-    const EllipseBText=EllipseB.value;
-    const EllipseBValue=parseFloat(EllipseBText);
-
+    const EllipseB=getInputValueById('bOfEl');
     //get area
-    const EllipseArea=document.getElementById('AofEl');
-    EllipseArea.innerText=(3.1416)*EllipseValue*EllipseBValue;
+    const area=(3.1416)*Ellipse*EllipseB;
+    const EllipseArea=setInnerText('AofEl',area);
 }

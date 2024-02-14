@@ -1,18 +1,13 @@
 function CalculateTriangleArea()
 {
     // triangle-base
-    const triangleBaseInput=document.getElementById('triangle-base');
-    const triangleBaseText=triangleBaseInput.value;
-    const baseValue=parseFloat(triangleBaseText);
-
+    const triangleBaseInput=getInputValueById('triangle-base');
 
     // triangle-height
-    const triangleHeightInput=document.getElementById('triangle-height');
-    const triangleHeightText=triangleHeightInput.value;
-    const heightValue=parseFloat(triangleHeightText);
+    const triangleHeightInput=getInputValueById('triangle-height');
 
     // display area
-    const DisplayArea=document.getElementById('triangle-area');
-    DisplayArea.innerText=.5*baseValue*heightValue;
+    const area=.5*triangleBaseInput*triangleHeightInput;
+    const DisplayArea=setInnerText('triangle-area',area);
 
 }

@@ -1,16 +1,24 @@
 function calculatePentagonArea()
 {
     //get p
-    const Pentagon=document.getElementById('pOfPt');
-    const PentagonText=Pentagon.value;
-    const PentagonValue=parseFloat(PentagonText);
+    const Pentagon=getInputValueById('pOfPt');
 
     //get b
-    const PentagonB=document.getElementById('bOfPt');
-    const PentagonBText=PentagonB.value;
-    const PentagonBValue=parseFloat(PentagonBText);
+    const PentagonB=getInputValueById('bOfPt');
 
     //get area
-    const PentagonArea=document.getElementById('AofPt');
-    PentagonArea.innerText=.5*PentagonValue*PentagonBValue;
+    const area=.5*Pentagon*PentagonB;
+    const PentagonArea=setInnerText('AofPt',area);
+}
+function getInputValueById(inputFiledId)
+{
+    const inputFiled=document.getElementById(inputFiledId);
+    const inputValueText=inputFiled.value;
+    const inputValue=parseFloat(inputValueText);
+    return inputValue;
+}
+function setInnerText(text,area)
+{
+    const texts=document.getElementById(text);
+    texts.innerText=area;
 }

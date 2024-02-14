@@ -1,18 +1,13 @@
 function calculateRhombusArea()
 {
     //Rhombus d1
-    const Rhombus=document.getElementById('d1OfRh');
-    const RhombusText=Rhombus.value;
-    const RhombusValue=parseFloat(RhombusText);
+    const Rhombus=getInputValueById('d1OfRh');
 
 
     //Rhombus d2
-    const RhombusD2=document.getElementById('d2OfRh');
-    const RhombusD2Text=RhombusD2.value;
-    const RhombusD2Value=parseFloat(RhombusD2Text);
-
+    const RhombusD2=getInputValueById('d2OfRh');
     //get area
-    const RhombusArea=document.getElementById('AofRh');
-    RhombusArea.innerText=.5*RhombusValue*RhombusD2Value;
+    const area=.5*Rhombus*RhombusD2;
+    const RhombusArea=setInnerText('AofRh',area);
 
 }
